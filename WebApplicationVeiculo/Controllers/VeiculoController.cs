@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using MongoDB.Bson;
 using MongoDB.Driver;
 using WebApplicationVeiculo.Context;
@@ -28,6 +29,7 @@ namespace WebApplicationVeiculo.Controllers
         // GET: Veiculo/Create
         public ActionResult Create()
         {
+            ViewBag.Categorias = new SelectList(_mongoDBContext.Categorias.Find(c => true).ToList(), "Id", "descricao");
             return View();
         }
 

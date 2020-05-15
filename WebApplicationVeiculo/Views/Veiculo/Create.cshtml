@@ -1,12 +1,10 @@
 ﻿@model WebApplicationVeiculo.Models.Veiculo
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Cadastro de veículo";
 }
 
-<h1>Create</h1>
-
-<h4>Veiculo</h4>
+<h4>Cadastro de veículo</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -43,14 +41,12 @@
                 <span asp-validation-for="anoFabricacao" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="categoria" class="control-label"></label>
-                <input asp-for="categoria" class="form-control" />
-                <span asp-validation-for="categoria" class="text-danger"></span>
-            </div>
-            <div class="form-group">
                 <label asp-for="dataAquisicao" class="control-label"></label>
                 <input asp-for="dataAquisicao" class="form-control" />
                 <span asp-validation-for="dataAquisicao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <select input asp-for="categoria" class="form-control" asp-items="ViewBag.Categorias"></select>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />

@@ -1,13 +1,11 @@
 ﻿@model WebApplicationVeiculo.Models.Veiculo
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Detalhamento";
 }
 
-<h1>Details</h1>
-
 <div>
-    <h4>Veiculo</h4>
+    <h4>Detalhes do veículo</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
@@ -61,6 +59,6 @@
     </dl>
 </div>
 <div>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    <a asp-action="Index">Back to List</a>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.Id }) |
+    <a asp-action="Index">Voltar à lista</a>
 </div>

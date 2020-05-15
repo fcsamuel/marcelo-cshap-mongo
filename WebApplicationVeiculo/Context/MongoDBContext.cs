@@ -25,5 +25,13 @@ namespace WebApplicationVeiculo.Context
                 return _database.GetCollection<Veiculo>("veiculo");
             }
         }
+            
+        public IMongoCollection<Categoria> Categorias
+        {
+            get
+            {
+                return _database.GetCollection<Categoria>("categoria");
+            }
+        }
     }
 }
